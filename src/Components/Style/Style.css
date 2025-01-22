@@ -1,0 +1,48 @@
+.contact-us:hover {
+  background-color: #1c0d5c !important;
+  cursor: pointer; /* Ensures the cursor remains a pointer */
+}
+/* contact-us */
+
+.know-more:hover {
+  background-color: #1c0d5c !important;
+  cursor: pointer; /* Ensures the cursor remains a pointer */
+}
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: #FE6204;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+ 
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee 5s linear infinite;
+}
+
+.marquee-content span {
+  display: inline-block;
+  margin-right: 50px; /* Space between items */
+  color: white;
+  display:flex;
+  gap:5px;
+}
+.icon{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:6px
+}
+/* Keyframes for continuous scrolling */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-10%);
+  }
+}

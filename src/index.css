@@ -1,13 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 /* Add to index.css or a relevant CSS file */
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
-
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.clip-triangle {
-    clip-path: polygon(100% 0, 0% 0%, 100% 100%);
+/* .clip-triangle {
+  clip-path: polygon(100% 0, 0% 0%, 100% 100%);
+} */
+/* Add this to your CSS */
+.slick-slide > div {
+  /* margin-right: 13px; */
+  /* margin-left: 15px; */
+  
+}
+/* Default dot styles */
+.slick-dots li button {
+  background-color: #888; /* Default dot color */
+  border-radius: 50%;    /* Circular dots */
+  width: 2px !important;           /* Size of dots */
+  height: 2px !important;          /* Size of dots */
+  opacity: 1;            /* Ensure visibility */
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+/* Active dot styles */
+.slick-dots li.slick-active button {
+  background-color: #ff6347; /* Active dot color (e.g., tomato) */
+}
+
+/* Optional: Hover effect for dots */
+.slick-dots li button:hover {
+  background-color: #555; /* Dot hover color */
+}
+.slick-dots li button:before{
+  font-size:0px;
+}
+
+.custom-slider .slick-slide > div {
+  margin-right: 0px !important;
+  /* margin-left: 15px; */
+}
+
+
+/* @media (min-width: 1280px) {
+  .responsive-img {
+    width: 20% !important;
+    left:44rem !important;
+    top: 7rem !important;
   }
+}
+@media (max-width: 1560px) {
+  .responsive-img {
+    width: 25% !important;
+    left: 35rem !important;
+    top: 6rem !important;
+  }
+} */
+
+/* .contact-us:hover{
+background-color:#1C0D5C !important
+} */
+.contact-us:hover {
+  background-color: #1C0D5C !important;
+  cursor: pointer; /* Ensures the cursor remains a pointer */
+}
