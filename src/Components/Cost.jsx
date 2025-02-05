@@ -81,7 +81,7 @@ const Cost = () => {
               Offering Cost Efficient <br /> Transport
               <span className="border-b-4 border-[#FE6204]"> Shipping!</span>
             </h3>
-            <p className="text-[#666666] text-base mt-[1.5%] mb-[2rem] 2xl:w-[30%] w-[100%] md:w-[60%] lg:w-[40%] mx-auto">
+            <p className="text-[#666666] text-base 2xl:text-lg mt-[1.5%] mb-[2rem] 2xl:w-[30%] w-[100%] md:w-[60%] lg:w-[40%] mx-auto">
               Logistics company specializes in managing the transportation
              storage and distribution of goods.
             </p>

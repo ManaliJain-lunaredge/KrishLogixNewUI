@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import { FaArrowRightLong } from "react-icons/fa6";
 const Footer = () => {
   return (
-    <div>
+    <div className="">
       <div
         className=" bg-cover bg-center bg-no-repeat w-full h-full "
         style={{ backgroundImage: `url(${footer_bg})` }}
@@ -69,7 +69,7 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/careers" className="hover:text-[#FE6204]">
+                      <Link to="/career" className="hover:text-[#FE6204]">
                         Careers
                       </Link>
                     </li>
@@ -158,7 +158,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="bg-[#F8F5F1] w-full text-center text-sm md:text-md font-semibold md:p-[1%] p-[5%] text-[#666666]">
-        © Copyright 2024. KrishLogiX Pvt. Ltd. All Rights Reserved.
+        © Copyright 2025 KrishLogiX Pvt. Ltd. All Rights Reserved.
       </div>
     </div>
   );

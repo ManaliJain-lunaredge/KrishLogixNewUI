@@ -30,7 +30,7 @@ const Tomorrow = () => {
                   </div>
                   <div>
                     <h3 className="text-[#290068]  font-bold text-3xl md:text-xl lg:text-3xl">250</h3>
-                    <p className="text-[#666666] text-sm">
+                    <p className="text-[#666666] text-sm 2xl:text-lg">
                       Distribution Center
                     </p>
                   </div>
@@ -41,7 +41,7 @@ const Tomorrow = () => {
                   </div>
                   <div>
                     <h3 className="text-[#290068] font-bold text-3xl md:text-xl lg:text-3xl">25</h3>
-                    <p className="text-[#666666] text-sm">Years Of Exprience</p>
+                    <p className="text-[#666666] text-sm 2xl:text-lg">Years Of Exprience</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -50,7 +50,7 @@ const Tomorrow = () => {
                   </div>
                   <div>
                     <h3 className="text-[#290068] font-bold text-3xl md:text-xl lg:text-3xl">45</h3>
-                    <p className="text-[#666666] text-sm">
+                    <p className="text-[#666666] text-sm 2xl:text-lg">
                       Countries and Regions
                     </p>
                   </div>
@@ -64,7 +64,7 @@ const Tomorrow = () => {
                 </h5>
                 <img
                   src={HorizontalBorder}
-                  className="absolute  left-[1rem] lg:left-[3rem] xl:left-[5rem] xl:top-[8rem]  lg:top-[6rem]  md:left-[3rem] md:top-[5.3rem] 2xl:top-[14.5rem] 2xl:w-[20rem] 2xl:left-[8rem] top-[5rem] md:w-[21rem] w-[80%]  "
+                  className="absolute  left-[1rem] lg:left-[3rem] xl:left-[5rem] xl:top-[8rem]  lg:top-[7rem]  md:left-[3rem] md:top-[5.8rem] 2xl:top-[14.5rem] 2xl:w-[20rem] 2xl:left-[8rem] top-[5rem] md:w-[21rem] w-[80%]  "
                 />
                 <h3 className="text-white md:text-lg text-xl font-semibold font-poppins 2xl:w-[40%] leading-tight mt-[5%] lg:mt-[5%] xl:mt-[2%] 2xl:text-3xl 2xl:py-[2rem]  md:mt-[4%] py-[1rem] lg:py-[0rem]   md:py-0">
                   Logistics Redefined for
@@ -111,7 +111,7 @@ const Tomorrow = () => {
               </div>
             </div>
             <div className="absolute bottom-[4rem] md:left-[3.5rem] md:bottom-[1.5rem] lg:left-[3.5rem] lg:bottom-[2rem] xl:left-[5.5rem] 2xl:left-[8.5rem] 2xl:bottom-[5rem] left-[8.5rem] flex items-center bg-white text-[#FE6204] hover:bg-[#FE6204] hover:text-white 2xl:w-[18%] cursor-pointer  md:w-[30%]  lg:w-[25%] xl:w-[21%] w-[10rem] md:px-[3%] px-[2%] py-[1%] rounded-md mt-[8%] md:mt-[4%]">
-              <a href="#about"
+              <a href="/about"
                 className=" px-1 py-2 xl:py-0  2xl:py-2 rounded-lg text-xl md:text-sm xl:text-xl font-medium transition"
               >
                 Know More

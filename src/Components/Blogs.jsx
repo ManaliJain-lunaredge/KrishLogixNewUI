@@ -7,6 +7,8 @@ import logistics1 from "../assets/Insights/logistics1.png";
 import logistics2 from "../assets/Insights/logistics2.png";
 import logistics3 from "../assets/Insights/logistics3.png";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import about_header from "../assets/About/about_header.png";
 
 const ArticleCard = ({ image, date, title, author, category, description }) => (
   <div className="p-2 ">
@@ -43,7 +45,18 @@ const ArticleCard = ({ image, date, title, author, category, description }) => (
   </div>
 );
 
-const Insights = () => {
+const Blogs = () => {
+  const [isBlogs, setIsBlogs] = useState(false);
+
+  useEffect(() => {
+    const pathname = window.location.pathname;
+
+    if (pathname === "/blogs") {
+      setIsBlogs(true);
+    } else if (pathname === "/") {
+      setIsBlogs(false);
+    }
+  }, []);
   const articles = [
     {
       image: logistics1,
@@ -80,7 +93,7 @@ const Insights = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    arrows:false,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -98,41 +111,68 @@ const Insights = () => {
   };
 
   return (
-    <div className="bg-[#F8F5F1] 2xl:p-0 p-[5%]" id="team"> 
-      <div className=" lg:w-[100%] w-[100%] 2xl:w-[90%] mx-auto p-[3%] py-[10%] md:py-[3%] mt-[3%]">
-        <div className="relative">
-         <div className="2xl:ms-[1rem]">
-         <h5 className="text-[#FE6204] md:text-lg text-base font-medium">Blogs & News updates</h5>
-          <img
-            src={HorizontalBorder}
-            alt="Border"
-            className="absolute left-[0%] top-[13%] md:top-[10%] 2xl:w-[15%] lg:w-[27%] lg:top-[13%] 2xl:top-[15%] 2xl:left-[0.5rem] lg:left-[-1%] xl:w-[18%]  md:w-[35%] w-[65%]"
-          />
-          <h3 className="text-[#290068] md:text-2xl text-xl font-semibold font-poppins leading-tight mt-[2%] py-[2rem] lg:py-[0rem]">
-            Find All Your Logistics <br /> Insights
-            <span className="border-b-4 border-[#FE6204]"> Here!</span>
-          </h3>
-         </div>
-          <div className="md:flex  hidden absolute right-[5%] xl:right-[3%] cursor-pointer items-center bg-[#FE6204] text-white xl:w-[14%] 2xl:w-[12%]  lg:w-[20%]  md:w-[27%] hover:bg-[#290068] px-[1%] py-[0.5%] rounded-md">
-            <button
-              type="button"
-              className="px-1 py-2 rounded-lg text-md font-medium transition"
-            >
-              View All Updates
-            </button>
-            <FaChevronRight className="text-xs ml-2 " />
+    <div>
+      {isBlogs ? (
+        <div
+          className="bg-cover bg-no-repeat bg-center 2xl:h-[500px] h-[400px]  flex justify-center items-center"
+          style={{ backgroundImage: `url(${about_header})` }}
+        >
+          <div className="text-center p-2 ">
+            <h3 className="text-white font-semibold 2xl:text-5xl pt-[4rem] 2xl:pt-0  md:text-4xl lg:text-4xl text-4xl mb-[1%]">
+              Our<span className="text-[#FE6204]"> Blogs</span>
+            </h3>
+            <p className="text-white text-md pt-[1rem] px-[2rem] 2xl:text-xl  2xl:pt-[1.5rem] lg:text-xl max-w-4xl  mx-auto">
+              Your trusted partner in freight forwarding, transportation, and
+              logistics, we provide tailored solutions to streamline your supply
+              chain.
+            </p>
           </div>
         </div>
-      <div className="md:mt-[5rem]">
-      <Slider {...sliderSettings} >
-          {articles.map((article, index) => (
-            <ArticleCard key={index} {...article}  />
-          ))}
-        </Slider>
-      </div>
+      ) : (
+        ""
+      )}
+      <div className="bg-[#F8F5F1] 2xl:p-0 p-[5%]" id="team">
+        <div
+          className={`lg:w-[100%] w-[100%] 2xl:w-[90%] mx-auto p-[3%] py-[10%] md:py-[3%] mt-[3%] ${
+            isBlogs && "mt-0"
+          }`}
+        >
+          <div className="relative">
+            <div className="2xl:ms-[1rem]">
+              <h5 className="text-[#FE6204] md:text-lg text-base font-medium">
+                Blogs & News updates
+              </h5>
+              <img
+                src={HorizontalBorder}
+                alt="Border"
+                className="absolute left-[0%] top-[13%] md:top-[10%] 2xl:w-[15%] lg:w-[27%] lg:top-[13%] 2xl:top-[15%] 2xl:left-[0.5rem] lg:left-[-1%] xl:w-[18%]  md:w-[35%] w-[65%]"
+              />
+              <h3 className="text-[#290068] md:text-2xl text-xl font-semibold font-poppins leading-tight mt-[2%] py-[2rem] lg:py-[0rem]">
+                Find All Your Logistics <br /> Insights
+                <span className="border-b-4 border-[#FE6204]"> Here!</span>
+              </h3>
+            </div>
+            <div className="md:flex top-[3rem] hidden absolute right-[5%] xl:right-[3%] cursor-pointer items-center bg-[#FE6204] text-white xl:w-[14%] 2xl:w-[12%]  lg:w-[20%]  md:w-[27%] hover:bg-[#290068] px-[1%] py-[0.5%] rounded-md">
+              <Link
+                to="/blogs"
+                className="px-1 py-2 rounded-lg text-md font-medium transition"
+              >
+                View All Updates
+              </Link>
+              <FaChevronRight className="text-xs ml-2 " />
+            </div>
+          </div>
+          <div className="md:mt-[5rem]">
+            <Slider {...sliderSettings}>
+              {articles.map((article, index) => (
+                <ArticleCard key={index} {...article} />
+              ))}
+            </Slider>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Insights;
+export default Blogs;

@@ -78,7 +78,7 @@ const Deliver = () => {
   return (
     <div>
       <div
-        className="w-full bg-cover bg-center bg-no-repeat text-center 2xl:pt-[3%] p-[7%]  relative 2xl:h-[90vh] md:h-[80vh]  lg:h-[85vh] xl:h-[85vh]  h-auto bg-[#F8F5F1]"
+        className="w-full bg-cover bg-center bg-no-repeat text-center 2xl:pt-[3%] p-[7%] 2xl:mb-[10rem] mb-0 md:mb-[3rem]  relative 2xl:h-[90vh] md:h-[80vh]  lg:h-[85vh] xl:h-[85vh]  h-auto bg-[#F8F5F1]"
         style={{ backgroundImage: `url(${bckgrd2})` }}
       >
         <div className="text-left md:text-center">
@@ -135,7 +135,7 @@ const Deliver = () => {
                 <span className="border-b-4 border-[#FE6204]"> Service!</span>
               </h3>
               <div className="flex items-center bg-[#FE6204]  text-white hover:bg-white hover:text-[#FE6204]  w-[23%] md:w-[28%] lg:w-[25%] xl:w-[18%] px-[3%] 2xl:w-[17%]  rounded-md mt-[4%] lg:mt-[3%] ">
-                <a href="#contact"
+                <a href="/contact"
                   className=" px-3 md:px-0 md:py-2 2xl:px-[0rem] 2xl:py-[1rem] py-4 rounded-lg text-xl md:text-sm lg:text-lg font-medium transition hover:cursor-pointer"
                 >
                   Book Your Parcel
@@ -236,12 +236,12 @@ const Deliver = () => {
             ))}
           </div>
           <div className="flex items-center bg-[#FE6204]  text-white text-center hover:bg-white hover:text-[#FE6204] mx-auto  w-[69%] md:w-[28%] lg:w-[25%] xl:w-[18%] px-[5%]  2xl:w-[17%]  rounded-md mt-[9%]  ">
-            <button
-              type="button"
+            <a href="/contact"
+             
               className=" px-3 md:px-0 md:py-2 2xl:px-[0rem] 2xl:py-[1rem]  py-4 rounded-lg text-lg md:text-sm lg:text-lg font-medium transition hover:cursor-pointer"
             >
               Book Your Parcel
-            </button>
+            </a>
           </div>
           <div className="">
             <img src={parcel} className="absolute bottom-0 left-[0.3rem]" />
